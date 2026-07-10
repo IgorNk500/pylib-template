@@ -1,6 +1,6 @@
 # Name of the lib
 ### Desc.
-###### *(Go to [changelog](changelog.md))*
+###### *[(Go to changelog)](CHANGELOG.md)*
 
 ## Table of contents
 1. [Installing](#installing)
