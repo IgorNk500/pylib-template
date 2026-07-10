@@ -6,7 +6,6 @@
 1. [Installing](#installing)
 2. ...
 3. [Build](#build)
-4. [Script configurations](#script-configurations)
 5. [Workflows](#workflows)
 
 ## Installing
@@ -31,15 +30,6 @@ Don't forget to change the config in the `pylib.json` file before doing this.\
 python -m pip install build
 python -m build
 ```
-
-## Script configurations
-**If your editor supports run configurations (for example, PyCharm), then you will be able to run various scripts:**
-+ Build wheel
-+ Clear + Build Wheel
-+ Clear + Build Wheel + Install
-+ Clear wheels
-+ Install
-+ Setup
 
 ## Workflows
 **This project contains one workflow that:**
