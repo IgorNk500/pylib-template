@@ -43,16 +43,26 @@ jobs:
         with:
           name: release-dists
           path: dist/
-      - name: Get wheel filename
-        run: echo "fn=$(ls dist/)" >> "$GITHUB_ENV"
-      - name: Upload release
+      - name: Get wheel+tar.gz filename
+        run: |
+          echo "whl=$(ls dist/ | grep ".whl")" >> "$GITHUB_ENV"
+          echo "tar=$(ls dist/ | grep ".tar.gz")" >> "$GITHUB_ENV"
+      - name: Upload wheel to Release
         uses: svenstaro/upload-release-action@v2
         with:
             repo_token: ${{ secrets.GITHUB_TOKEN }}
-            file: dist/${{ env.fn }}
-            asset_name: ${{ env.fn }}
+            file: dist/${{ env.whl }}
+            asset_name: ${{ env.whl }}
             release_name: ${{ github.event.release.name }}
             overwrite: true
+      - name: Upload archive to Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: dist/${{ env.tar }}
+          asset_name: ${{ env.tar }}
+          release_name: ${{ github.event.release.name }}
+          overwrite: true
   pypi-publish:
     name: PyPi publish
     runs-on: ubuntu-latest
