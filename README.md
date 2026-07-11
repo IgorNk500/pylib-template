@@ -16,11 +16,13 @@ python -m pip install pypi-id
 ...
 
 ## Build
-### To build the wheel, run:
+### To build the package, run:
 ```bash
 python -m pip install build
 python -m build
 ```
+Don't forget to change the config in the `pyproject.toml` file before doing this.\
+**All distributions are stored in the `dist` folder**
 
 ## Workflows
 **This project contains one workflow that:**
