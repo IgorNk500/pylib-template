@@ -18,15 +18,6 @@ python -m pip install pypi-id
 ## Build
 ### To build the wheel, run:
 ```bash
-python -m pip install setuptools wheel
-python setup.py bdist_wheel
-```
-Don't forget to change the config in the `pylib.json` file before doing this.\
-**All wheels are stored in the `dist` folder**
-
-***
-### Also, you can use `pyproject.toml`:
-```bash
 python -m pip install build
 python -m build
 ```
