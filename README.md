@@ -42,3 +42,7 @@ Don't forget to change the config in the `pyproject.toml` file before doing this
 + and uploads the release to PyPi.
 
 ## If you encounter any errors, please open [issue](https://github.com/IgorNk500/pylib-template/issues/new "New issue") on GitHub.
+<!--                                                                           ^
+                                                                               |
+										                                Edit this link!!!
+-->
