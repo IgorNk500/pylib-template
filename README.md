@@ -1,3 +1,14 @@
+<div align="center">
+	Project logo
+	<!--
+	<img src="logo.png" alt="Logo">-->
+	<br/>
+	<br/>
+	Project bages
+</div>
+
+***
+
 # Name of the lib
 ### Desc.
 ###### *[(Go to changelog)](CHANGELOG.md)*
