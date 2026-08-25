@@ -17,7 +17,7 @@
 1. [Installing](#installing)
 2. ...
 3. [Build](#build)
-5. [Workflows](#workflows)
+4. [Workflows](#workflows)
 
 ## Installing
 ```bash
