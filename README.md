@@ -9,7 +9,7 @@
 
 ***
 
-# Name of the lib
+# Name of the project
 ### Desc.
 ###### *[(Go to changelog)](CHANGELOG.md)*
 
