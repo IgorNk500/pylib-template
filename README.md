@@ -40,6 +40,7 @@ Don't forget to change the config in the `pyproject.toml` file before doing this
 + collects the wheel library,
 + adds it to the release files,
 + and uploads the release to PyPi.
+
 **Also, project contains pytest and pylint workflows**
 
 ## If you encounter any errors, please open [issue](https://github.com/IgorNk500/pylib-template/issues/new "New issue") on GitHub.
