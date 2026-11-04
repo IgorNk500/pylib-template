@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - name: Build lib from setup.py + build wheel
+      - name: Build package
         run: |
           python -m pip install build
           python -m build
@@ -43,26 +43,14 @@ jobs:
         with:
           name: release-dists
           path: dist/
-      - name: Get wheel+tar.gz filename
-        run: |
-          echo "whl=$(ls dist/ | grep ".whl")" >> "$GITHUB_ENV"
-          echo "tar=$(ls dist/ | grep ".tar.gz")" >> "$GITHUB_ENV"
-      - name: Upload wheel to Release
+      - name: Upload package to Github Releases
         uses: svenstaro/upload-release-action@v2
         with:
             repo_token: ${{ secrets.GITHUB_TOKEN }}
-            file: dist/${{ env.whl }}
-            asset_name: ${{ env.whl }}
+            file: dist/*
+            file_glob: true
             release_name: ${{ github.event.release.name }}
             overwrite: true
-      - name: Upload archive to Release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: dist/${{ env.tar }}
-          asset_name: ${{ env.tar }}
-          release_name: ${{ github.event.release.name }}
-          overwrite: true
   pypi-publish:
     name: PyPi publish
     runs-on: ubuntu-latest
